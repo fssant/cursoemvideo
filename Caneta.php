@@ -10,5 +10,9 @@ class Caneta{
       $resposta = $this->tampada?("Caneta tampada,impossivel rabiscar"):("Rabiscando");
       echo($resposta);
     }
+
+    function tampar(){
+      $this->tampada = true;
+    }
 }
 ?>
