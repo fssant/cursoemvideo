@@ -6,6 +6,13 @@ class Caneta{
     protected $carga;
     protected $tampada;
 
+    public function __construct($modelo, $cor, $ponta){
+      $this->setModelo($modelo);
+      $this->setCor($cor);
+      $this->setPonta($ponta);
+      $this->tampar();
+    }
+
     public function setModelo($modelo){
       $this->modelo = $modelo;
     }
