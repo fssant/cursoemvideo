@@ -1,21 +1,21 @@
 <?php
 class Caneta{
-    var $modelo;
-    var $cor;
-    var $ponta;
-    var $carga;
-    var $tampada;
+    public $modelo;
+    public $cor;
+    private $ponta;
+    protected $carga;
+    protected $tampada;
 
-    function rabiscar(){
+    public function rabiscar(){
       $resposta = $this->tampada?("Caneta tampada,impossivel rabiscar"):("Rabiscando");
       echo($resposta);
     }
 
-    function tampar(){
+    private function tampar(){
       $this->tampada = true;
     }
 
-    function destampar(){
+    private function destampar(){
       $this->tampada = false;
     }
 }
