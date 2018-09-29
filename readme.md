@@ -6,4 +6,4 @@ Motivação
 
 Melhorar e solidificar conceitos básicos em POO
 
-curso disponível em [youtube/cursoemvideo]()
+curso disponível em [youtube.com/cursoemvideo]()
