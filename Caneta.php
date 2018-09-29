@@ -36,18 +36,18 @@ class Caneta{
     public function getTampada(){
       return($this->tampada);
     }
-    
+
     public function rabiscar(){
-      $resposta = $this->tampada?("Caneta tampada,impossivel rabiscar"):("Rabiscando");
+      $resposta = $this->getTampada()?("Caneta tampada,impossivel rabiscar"):("Rabiscando");
       echo($resposta);
     }
 
     private function tampar(){
-      $this->tampada = true;
+      $this->setTampada(true);
     }
 
     private function destampar(){
-      $this->tampada = false;
+      $this->setTampada(false);
     }
 }
 ?>
