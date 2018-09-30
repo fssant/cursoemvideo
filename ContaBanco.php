@@ -49,5 +49,9 @@ class ContaBanco{
       $this->setSaldo()==0?$this->setStatus(false):$this->setStatus(true);
     }
 
+    public function depositar($valor){
+      $resposta = $valor>0?$this->setSaldo($this->getSaldo()+$valor):false;
+      return $resposta;
+    }
 
 }
