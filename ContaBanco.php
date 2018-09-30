@@ -45,5 +45,7 @@ class ContaBanco{
       $this->setStatus(true);
     }
 
-  
+    function fecharConta(){
+      $this->setSaldo()==0?$this->setStatus(false):$this->setStatus(true);
+    }
 }
