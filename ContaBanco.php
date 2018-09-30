@@ -37,7 +37,7 @@ class ContaBanco{
       return($this->saldo);
     }
 
-    function abrirConta($tipo, $dono, $numero){
+    public function abrirConta($tipo, $dono, $numero){
       $this->setTipo($tipo);
       $this->setDono($dono);
       $this->setNumConta($numero);
@@ -45,7 +45,9 @@ class ContaBanco{
       $this->setStatus(true);
     }
 
-    function fecharConta(){
+    public function fecharConta(){
       $this->setSaldo()==0?$this->setStatus(false):$this->setStatus(true);
     }
+
+
 }
