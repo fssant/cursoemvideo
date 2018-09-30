@@ -37,10 +37,13 @@ class ContaBanco{
       return($this->saldo);
     }
 
-    function abrirConta($tipo, $dono){
+    function abrirConta($tipo, $dono, $numero){
       $this->setTipo($tipo);
       $this->setDono($dono);
+      $this->setNumConta($numero);
       $this->getTipo()=="CC"?$this->setSaldo(50):$this->setSaldo(150);
       $this->setStatus(true);
     }
+
+  
 }
