@@ -38,11 +38,17 @@ class ContaBanco{
     }
 
     public function abrirConta($tipo, $dono, $numero){
-      $this->setTipo($tipo);
-      $this->setDono($dono);
-      $this->setNumConta($numero);
-      $this->getTipo()=="CC"?$this->setSaldo(50):$this->setSaldo(150);
-      $this->setStatus(true);
+      $resposta = true;
+      if((($tipo=="CC")||($tipo=="CP"))&&(ctype_digit($numero))){
+        $this->setStatus(true);
+        $this->setTipo($tipo);
+        $this->setNumConta($numero);
+        $this->setDono($dono);
+        $this->getTipo()=="CC"?$this->setSaldo(50):$this->setSaldo(150);
+      }else{
+        $resposta = false;
+      }
+      return($resposta);
     }
 
     public function fecharConta(){
@@ -52,7 +58,7 @@ class ContaBanco{
 
     public function depositar($valor){
       $resposta = $valor>0?$this->setSaldo($this->getSaldo()+$valor):false;
-      return $resposta;
+      return ($resposta);
     }
 
 }
