@@ -39,7 +39,7 @@ class ContaBanco{
 
     public function abrirConta($tipo, $dono, $numero){
       $resposta = true;
-      if((($tipo=="CC")||($tipo=="CP"))&&(ctype_digit($numero))){
+      if((($tipo=="CC")||($tipo=="CP"))&&(is_numeric($numero))){
         $this->setStatus(true);
         $this->setTipo($tipo);
         $this->setNumConta($numero);
@@ -61,4 +61,5 @@ class ContaBanco{
       return ($resposta);
     }
 
+  
 }
