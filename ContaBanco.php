@@ -70,4 +70,8 @@ class ContaBanco{
       }
       return ($resposta);
     }
+
+    public function pagarMensal(){
+      $resposta = $this->getTipo()=="CC"?$this->setSaldo($this->getSaldo()-12):$this->setSaldo($this->getSaldo()-20);
+    }
 }
