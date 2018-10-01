@@ -61,5 +61,13 @@ class ContaBanco{
       return ($resposta);
     }
 
-  
+    public function sacar($valor){
+      if((is_numeric($valor))&&($valor<=$this->getSaldo())){
+        $this->setSaldo($this->getSaldo()-$valor);
+        $resposta = true;
+      }else{
+        $resposta = false;
+      }
+      return ($resposta);
+    }
 }
